@@ -1,20 +1,21 @@
 import React from "react";
-import { NavigationContainer, StackActions } from "@react-navigation/native";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
-
-const Stack = createNativeStackNavigator();
+import { View } from "react-native";
+import AppButton from "./app/Components/AppButton";
+import AppText from "./app/Components/AppText";
 
 export default function App() {
     return (
-        <NavigationContainer>
-            <Stack.Navigator initialRouteName="Home">
-                <Stack.Screen name="Home">
-                    {(props) => <WelcomeScreen {...props} />}
-                </Stack.Screen>
-                <Stack.Screen name="Item" component={ViewImageScreen} />
-            </Stack.Navigator>
-        </NavigationContainer>
+        <View
+            style={{
+                flex: 1,
+                justifyContent: "center",
+                alignItems: "center",
+            }}
+        >
+            <AppButton
+                title="Login"
+                onPress={() => console.log("button pressed")}
+            />
+        </View>
     );
 }
