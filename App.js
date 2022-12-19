@@ -1,7 +1,17 @@
 import React from "react";
 import { View } from "react-native";
 
-import MessagesScreen from "./app/screens/MessagesScreen";
+import Screen from "./app/Components/Screen";
+import ListItem from "./app/Components/ListItem";
+import AppIcon from "./app/Components/AppIcon";
 export default function App() {
-    return <MessagesScreen />;
+    return (
+        <Screen>
+            <ListItem
+                title="My title"
+                subTitle="My subtitle"
+                ImageComponent={<AppIcon name="email" />}
+            />
+        </Screen>
+    );
 }
