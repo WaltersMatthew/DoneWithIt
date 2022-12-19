@@ -1,8 +1,11 @@
 import React from "react";
-import { View } from "react-native";
-import ListingsScreen from "./app/Components/ListingsScreen";
 
-import AccountScreen from "./app/screens/AccountScreen";
+import AppTextInput from "./app/Components/AppTextInput";
+import Screen from "./app/Components/Screen";
 export default function App() {
-    return <ListingsScreen />;
+    return (
+        <Screen>
+            <AppTextInput placeholder="Username" icon="email" />
+        </Screen>
+    );
 }
