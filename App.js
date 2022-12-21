@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import LoginScreen from "./app/screens/LoginScreen";
+import React from "react";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 
 export default function App() {
-    return <LoginScreen />;
+    return <ListingDetailsScreen />;
 }
