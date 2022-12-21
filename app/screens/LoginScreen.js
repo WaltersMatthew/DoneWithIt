@@ -1,12 +1,9 @@
 import React from "react";
 import { Image, StyleSheet } from "react-native";
-import { Formik } from "formik";
 import * as Yup from "yup";
 
-import AppButton from "../Components/AppButton";
-import AppText from "../Components/AppText";
-import AppTextInput from "../Components/AppTextInput";
 import Screen from "../Components/Screen";
+import { AppForm, AppFormField, SubmitButton } from "../Components/forms";
 
 const validationSchema = Yup.object().shape({
     email: Yup.string().required().email().label("Email"),
@@ -20,41 +17,32 @@ function LoginScreen(props) {
                 style={styles.logo}
                 source={require("../assets/logo-red.png")}
             />
-            <Formik
+            <AppForm
                 initialValues={{ email: "", password: "" }}
                 onSubmit={(values) => console.log(values)}
                 validationSchema={validationSchema}
             >
-                {({ handleChange, handleSubmit, errors }) => (
-                    <>
-                        <AppTextInput
-                            autoCapitalize="none"
-                            autoCorrect={false}
-                            icon="email"
-                            keyboardType="email-address"
-                            onChageText={handleChange("email")}
-                            placeholder="email"
-                            textContentType="emailAddress"
-                        />
-                        <AppText style={{ color: "red" }}>
-                            {errors.email}
-                        </AppText>
-                        <AppTextInput
-                            autoCapitalize="none"
-                            autoCorrect={false}
-                            icon="lock"
-                            onChageText={handleChange("password")}
-                            placeholder="password"
-                            secureTextEntry={true}
-                            textContentType="password"
-                        />
-                        <AppText style={{ color: "red" }}>
-                            {errors.password}
-                        </AppText>
-                        <AppButton title="Login" onPress={handleSubmit} />
-                    </>
-                )}
-            </Formik>
+                <AppFormField
+                    autoCapitalize="none"
+                    autoCorrect={false}
+                    icon="email"
+                    keyboardType="email-address"
+                    name="email"
+                    placeholder="Email"
+                    textContentType="emailAddress"
+                />
+
+                <AppFormField
+                    autoCapitalize="none"
+                    autoCorrect={false}
+                    icon="lock"
+                    name="password"
+                    placeholder="Password"
+                    secureTextEntry={true}
+                    textContentType="password"
+                />
+                <SubmitButton title="Login" />
+            </AppForm>
         </Screen>
     );
 }
