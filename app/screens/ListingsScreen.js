@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { FlatList, StyleSheet } from "react-native";
 
+import ActivityIndicator from "../Components/ActivityIndicator";
 import Card from "../Components/Card";
 import colors from "../config/colors";
 import listingsApi from "../api/listings";
 import routes from "../navigation/routes";
 import Screen from "../Components/Screen";
+import AppText from "../Components/AppText";
+import AppButton from "../Components/AppButton";
 
 // IF NO BACKEND:
 // const listings = [
@@ -25,15 +28,22 @@ import Screen from "../Components/Screen";
 
 function ListingsScreen({ navigation }) {
     //If using backend:
-
     const [listings, setListings] = useState([]);
+    const [error, setError] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     useEffect(() => {
         loadListings();
     }, []);
 
     const loadListings = async () => {
+        setLoading(true);
         const response = await listingsApi.getListings();
+        setLoading(false);
+
+        if (!response.ok) return setError(true);
+
+        setError(false);
         setListings(response.data);
     };
 
@@ -41,6 +51,13 @@ function ListingsScreen({ navigation }) {
 
     return (
         <Screen style={styles.screen}>
+            {error && (
+                <>
+                    <AppText>Couldn't retrieve the listings.</AppText>
+                    <AppButton title="Retry" onPress={loadListings} />
+                </>
+            )}
+            <ActivityIndicator visible={loading} />
             <FlatList
                 data={listings}
                 keyExtractor={(listing) => listing.id.toString()}
