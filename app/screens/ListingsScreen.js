@@ -9,6 +9,7 @@ import routes from "../navigation/routes";
 import Screen from "../Components/Screen";
 import AppText from "../Components/AppText";
 import AppButton from "../Components/AppButton";
+import useApi from "../hooks/useApi";
 
 // IF NO BACKEND:
 // const listings = [
@@ -28,25 +29,16 @@ import AppButton from "../Components/AppButton";
 
 function ListingsScreen({ navigation }) {
     //If using backend:
-    const [listings, setListings] = useState([]);
-    const [error, setError] = useState(false);
-    const [loading, setLoading] = useState(false);
+    const {
+        data: listings,
+        error,
+        loading,
+        request: loadListings,
+    } = useApi(listingsApi.getListings);
 
     useEffect(() => {
-        loadListings();
+        loadListings(1, 2, 3);
     }, []);
-
-    const loadListings = async () => {
-        setLoading(true);
-        const response = await listingsApi.getListings();
-        setLoading(false);
-
-        if (!response.ok) return setError(true);
-
-        setError(false);
-        setListings(response.data);
-    };
-
     //--To here
 
     return (
