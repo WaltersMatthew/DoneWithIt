@@ -6,22 +6,23 @@ import ImageInputList from "../ImageInputList";
 
 function FormImagePicker({ name }) {
     const { errors, setFieldValue, touched, values } = useFormikContext();
+    const imageUris = values[name];
 
     const handleAdd = (uri) => {
-        setFieldValue(name, [...values[name], uri]);
+        setFieldValue(name, [...imageUris, uri]);
     };
 
     const handleRemove = (uri) => {
         setFieldValue(
             name,
-            values[name].filter((imageUri) => imageUri !== uri)
+            imageUris.filter((imageUri) => imageUri !== uri)
         );
     };
 
     return (
         <>
             <ImageInputList
-                imageUris={values[name]}
+                imageUris={imageUris}
                 onAddImage={handleAdd}
                 onRemoveImage={handleRemove}
             />

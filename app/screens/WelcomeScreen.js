@@ -1,18 +1,7 @@
 import React from "react";
-import {
-    View,
-    ImageBackground,
-    StyleSheet,
-    Image,
-    Text,
-    Button,
-} from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { View, ImageBackground, StyleSheet, Image, Text } from "react-native";
 
-import colors from "../config/colors";
 import AppButton from "../Components/AppButton";
-import App from "../../App";
 
 function WelcomeScreen({ navigation }) {
     return (

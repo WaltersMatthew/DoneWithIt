@@ -20,7 +20,7 @@ function ImageInput({ imageUri, onChangeImage }) {
         const { granted } =
             await ImagePicker.requestMediaLibraryPermissionsAsync();
         if (!granted)
-            alert("You need to enable permission to access the library");
+            alert("You need to enable permission to access the library.");
     };
 
     const handlePress = () => {
@@ -30,7 +30,7 @@ function ImageInput({ imageUri, onChangeImage }) {
                 "Delete",
                 "Are you sure you want to delete this image?",
                 [
-                    { text: "yes", onPress: () => onChangeImage(null) },
+                    { text: "Yes", onPress: () => onChangeImage(null) },
                     { text: "No" },
                 ]
             );
@@ -42,9 +42,9 @@ function ImageInput({ imageUri, onChangeImage }) {
                 mediaTypes: ImagePicker.MediaTypeOptions.Images,
                 quality: 0.5,
             });
-            if (!result.canceled) onChangeImage(result.uri);
+            if (!result.canceled) onChangeImage(result.assets[0].uri);
         } catch (error) {
-            console.log("error reading an image", error);
+            console.log("Error reading an image", error);
         }
     };
 
@@ -53,9 +53,9 @@ function ImageInput({ imageUri, onChangeImage }) {
             <View style={styles.container}>
                 {!imageUri && (
                     <MaterialCommunityIcons
-                        name="camera"
                         color={colors.medium}
-                        size={50}
+                        name="camera"
+                        size={40}
                     />
                 )}
                 {imageUri && (
@@ -73,6 +73,7 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         height: 100,
         justifyContent: "center",
+        marginVertical: 10,
         overflow: "hidden",
         width: 100,
     },

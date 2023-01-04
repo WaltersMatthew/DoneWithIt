@@ -6,6 +6,7 @@ import * as Location from "expo-location";
 import AppForm from "../Components/forms/AppForm";
 import AppFormField from "../Components/forms/AppFormField";
 import AppFormPicker from "../Components/forms/AppFormPicker";
+import listingsApi from "../api/listings";
 import Screen from "../Components/Screen";
 import SubmitButton from "../Components/forms/SubmitButton";
 import CategoryPickerItem from "../Components/CategoryPickerItem";
@@ -97,6 +98,14 @@ function ListingEditScreen() {
         getLocation();
     }, []);
 
+    const handleSubmit = async (listing) => {
+        const result = await listingsApi.addListing({ ...listing, location });
+        if (!result.ok) {
+            return alert("Could not save the listing");
+        }
+        alert("Success");
+    };
+
     return (
         <Screen style={styles.container}>
             <AppForm
@@ -107,7 +116,7 @@ function ListingEditScreen() {
                     category: null,
                     images: [],
                 }}
-                onSubmit={(values) => console.log(location)}
+                onSubmit={handleSubmit}
                 validationSchema={validationSchema}
             >
                 <FormImagePicker name="images" />
