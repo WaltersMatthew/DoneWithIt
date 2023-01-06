@@ -12,44 +12,46 @@ import AppButton from "../Components/AppButton";
 import useApi from "../hooks/useApi";
 
 // IF NO BACKEND:
-// const listings = [
-//     {
-//         id: 1,
-//         title: "Red jacket for sale",
-//         price: 100,
-//         image: require("../assets/jacket.jpg"),
-//     },
-//     {
-//         id: 2,
-//         title: "Couch in great condition",
-//         price: 1000,
-//         image: require("../assets/couch.jpg"),
-//     },
-// ];
+const listings = [
+    {
+        id: 1,
+        title: "Red jacket for sale",
+        price: 100,
+        image: require("../assets/jacket.jpg"),
+    },
+    {
+        id: 2,
+        title: "Couch in great condition",
+        price: 1000,
+        image: require("../assets/couch.jpg"),
+    },
+];
 
 function ListingsScreen({ navigation }) {
     //If using backend:
-    const {
-        data: listings,
-        error,
-        loading,
-        request: loadListings,
-    } = useApi(listingsApi.getListings);
+    // const {
+    //     data: listings,
+    //     error,
+    //     loading,
+    //     request: loadListings,
+    // } = useApi(listingsApi.getListings);
 
-    useEffect(() => {
-        loadListings(1, 2, 3);
-    }, []);
+    // useEffect(() => {
+    //     loadListings(1, 2, 3);
+    // }, []);
     //--To here
 
     return (
         <Screen style={styles.screen}>
-            {error && (
+            {/* for backend */}
+            {/* {error && (
                 <>
                     <AppText>Couldn't retrieve the listings.</AppText>
                     <AppButton title="Retry" onPress={loadListings} />
                 </>
-            )}
-            <ActivityIndicator visible={loading} />
+            )} */}
+            {/* to here */}
+            {/* <ActivityIndicator visible={loading} /> */}
             <FlatList
                 data={listings}
                 keyExtractor={(listing) => listing.id.toString()}
@@ -58,9 +60,9 @@ function ListingsScreen({ navigation }) {
                         title={item.title}
                         subTitle={`$${item.price}`}
                         //for no backend:
-                        // imageUrl={item.image}
+                        imageUrl={item.image}
                         //for backend:
-                        imageUrl={item.images[0].url}
+                        // imageUrl={item.images[0].url}
                         onPress={() =>
                             navigation.navigate(routes.LISTING_DETAILS, item)
                         }
