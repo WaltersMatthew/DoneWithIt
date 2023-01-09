@@ -100,7 +100,7 @@ function ListingEditScreen() {
         getLocation();
     }, []);
 
-    const handleSubmit = async (listing) => {
+    const handleSubmit = async (listing, { resetForm }) => {
         setProgress(0);
         setUploadVisible(true);
         const result = await listingsApi.addListing(
@@ -112,6 +112,8 @@ function ListingEditScreen() {
             setUploadVisible(false);
             return alert("Could not save the listing");
         }
+
+        resetForm();
     };
 
     return (
