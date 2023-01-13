@@ -53,7 +53,7 @@ As a user, I want to be able to...
     <div style="text-align: center">
         <em>Login Form</em>
         <br/>
-        <img src="./app/assets/screengrabs/login.png"
+        <img src="./app/assets/screengrabs/Login.png"
         alt="login screen"
         height="300px;" />
     </div>
