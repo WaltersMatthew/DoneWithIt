@@ -4,6 +4,7 @@ import * as Progress from "react-native-progress";
 import AnimatedLottieView from "lottie-react-native";
 
 import AppText from "../Components/AppText";
+import colors from "../config/colors";
 
 function UploadScreen({ onDone, progress = 0, visible = false }) {
     return (

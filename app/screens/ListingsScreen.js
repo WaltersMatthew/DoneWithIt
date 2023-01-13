@@ -50,8 +50,8 @@ function ListingsScreen({ navigation }) {
                     <AppButton title="Retry" onPress={loadListings} />
                 </>
             )}
-            {/* to here */}
             <ActivityIndicator visible={loading} />
+            {/* to here */}
             <FlatList
                 data={listings}
                 keyExtractor={(listing) => listing.id.toString()}
@@ -63,8 +63,13 @@ function ListingsScreen({ navigation }) {
                         // imageUrl={item.image}
                         //for backend:
                         imageUrl={item.images[0].url}
-                        onPress={() =>
-                            navigation.navigate(routes.LISTING_DETAILS, item)
+                        onPress={
+                            () =>
+                                navigation.navigate(
+                                    routes.LISTING_DETAILS,
+                                    item
+                                )
+                            // console.log(item)
                         }
                     />
                 )}

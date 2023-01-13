@@ -9,14 +9,16 @@ import Screen from "../Components/Screen";
 const initialMessages = [
     {
         id: 1,
-        title: "T1",
-        description: "D1",
+        title: "Still for sale?",
+        description:
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna",
         image: require("../assets/headshot.jpg"),
     },
     {
         id: 2,
-        title: "T2",
-        description: "D2",
+        title: "I want it!",
+        description:
+            "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
         image: require("../assets/headshot.jpg"),
     },
 ];
@@ -52,8 +54,9 @@ function MessagesScreen(props) {
                     setMessages([
                         {
                             id: 2,
-                            title: "T2",
-                            description: "D2",
+                            title: "I want it!",
+                            description:
+                                "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat",
                             image: require("../assets/headshot.jpg"),
                         },
                     ]);

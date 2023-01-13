@@ -118,11 +118,11 @@ function ListingEditScreen() {
 
     return (
         <Screen style={styles.container}>
-            <UploadScreen
+            {/* <UploadScreen
                 onDone={() => setUploadVisible(false)}
                 progress={progress}
                 visible={uploadVisible}
-            />
+            /> */}
             <AppForm
                 initialValues={{
                     title: "",
