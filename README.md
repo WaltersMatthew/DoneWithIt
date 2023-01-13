@@ -42,65 +42,68 @@ As a user, I want to be able to...
 
 ## screenshots
 
-<div style='display: flex; flex-wrap: wrap; margin: 10'>
-    <div style="text-align: center">
-        <em>Welcome Screen</em>
-        <br/>
-        <img src="./app/assets/screengrabs/welcome.png"
-        alt="welcome splash"
-        height="300px;" />
-    </div>
-    <div style="text-align: center">
-        <em>Login Form</em>
-        <br/>
-        <img src="./app/assets/screengrabs/Login.png"
-        alt="login screen"
-        height="300px;" />
-    </div>
-    <div style="text-align: center">
-        <em>Listings Feed</em>
-        <br/>
-        <img src="./app/assets/screengrabs/feed.png"
-        alt="listings screen"
-        height="300px;" />
-    </div>
-    <div style="text-align: center">
-        <em>Listing Detail</em>
-        <br/>
-        <img src="./app/assets/screengrabs/detail.png"
-        alt="listing detail screen"
-        height="300px;" />
-    </div>
-    <div style="text-align: center">
-        <em>View Image</em>
-        <br/>
-        <img src="./app/assets/screengrabs/viewimage.png"
-        alt="view image screen"
-        height="300px;" />
-    </div>
-    <div style="text-align: center">
-        <em>New Listing Form</em>
-        <br/>
-        <img src="./app/assets/screengrabs/listingedit.png"
-        alt="listing edit screen"
-        height="300px;" />
-    </div>
-    <div style="text-align: center">
-        <em>Account Screen</em>
-        <br/>
-        <img src="./app/assets/screengrabs/account.png"
-        alt="account screen"
-        height="300px;" />
-    </div>
-    <div style="text-align: center">
-        <em>Messages Screen</em>
-        <br/>
-        <img src="./app/assets/screengrabs/messages.png"
-        alt="messages screen"
-        height="300px;" />
-    </div>
-</div>
-<!-- (./app/assets/screengrabs/welcome.png) -->
+<table>
+  <tr>
+        <td valign="top">
+            <em>Welcome Screen</em>
+            <br/>
+            <img src="./app/assets/screengrabs/welcome.png"
+            alt="welcome splash"
+            height="300px;" />
+        </td>
+            <td valign="top">
+            <em>Login Form</em>
+            <br/>
+            <img src="./app/assets/screengrabs/Login.png"
+            alt="login screen"
+            height="300px;" />
+        </td>
+            <td valign="top">
+            <em>Listings Feed</em>
+            <br/>
+            <img src="./app/assets/screengrabs/feed.png"
+            alt="listings screen"
+            height="300px;" />
+        </td>
+            <td valign="top">
+            <em>Listing Detail</em>
+            <br/>
+            <img src="./app/assets/screengrabs/detail.png"
+            alt="listing detail screen"
+            height="300px;" />
+        </td>
+  </tr>
+  <tr>
+        <td valign="top">
+            <em>View Image</em>
+            <br/>
+            <img src="./app/assets/screengrabs/viewimage.png"
+            alt="view image screen"
+            height="300px;" />
+        </td>
+        <td valign="top">
+            <em>New Listing Form</em>
+            <br/>
+            <img src="./app/assets/screengrabs/listingedit.png"
+            alt="listing edit screen"
+            height="300px;" />
+        </td>
+        <td valign="top">
+            <em>Account Screen</em>
+            <br/>
+            <img src="./app/assets/screengrabs/account.png"
+            alt="account screen"
+            height="300px;" />
+        </td>
+        <td valign="top">
+            <em>Messages Screen</em>
+            <br/>
+            <img src="./app/assets/screengrabs/messages.png"
+            alt="messages screen"
+            height="300px;" />
+        </td>
+    </tr>
+</table>
 
 ## MVP Goals
 
