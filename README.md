@@ -42,7 +42,74 @@ As a user, I want to be able to...
 
 ## screenshots
 
-screenshots go here
+<div style='display: flex; flex-wrap: wrap; margin: 10'>
+    <div style="text-align: center">
+        <em>Welcome Screen</em>
+        <br/>
+        <img src="./app/assets/screengrabs/welcome.png"
+        alt="welcome splash"
+        height="300px;" />
+    </div>
+    &nbsp;
+    <div style="text-align: center">
+        <em>Login Form</em>
+        <br/>
+        <img src="./app/assets/screengrabs/login.png"
+        alt="login screen"
+        height="300px;" />
+    </div>
+    &nbsp;
+    <div style="text-align: center">
+        <em>Listings Feed</em>
+        <br/>
+        <img src="./app/assets/screengrabs/feed.png"
+        alt="listings screen"
+        height="300px;" />
+    </div>
+    &nbsp;
+    <div style="text-align: center">
+        <em>Listing Detail</em>
+        <br/>
+        <img src="./app/assets/screengrabs/detail.png"
+        alt="listing detail screen"
+        height="300px;" />
+    </div>
+    &nbsp;
+    &nbsp;
+    <div style="text-align: center">
+        <em>View Image</em>
+        <br/>
+        <img src="./app/assets/screengrabs/viewimage.png"
+        alt="view image screen"
+        height="300px;" />
+    </div>
+    &nbsp;
+    <div style="text-align: center">
+        <em>New Listing Form</em>
+        <br/>
+        <img src="./app/assets/screengrabs/listingedit.png"
+        alt="listing edit screen"
+        height="300px;" />
+    </div>
+    &nbsp;
+    <div style="text-align: center">
+        <em>Account Screen</em>
+        <br/>
+        <img src="./app/assets/screengrabs/account.png"
+        alt="account screen"
+        height="300px;" />
+    </div>
+    &nbsp;
+    <div style="text-align: center">
+        <em>Messages Screen</em>
+        <br/>
+        <img src="./app/assets/screengrabs/messages.png"
+        alt="messages screen"
+        height="300px;" />
+    </div>
+    &nbsp;
+</div>
+<!-- (./app/assets/screengrabs/welcome.png) -->
 
 ## MVP Goals
 
