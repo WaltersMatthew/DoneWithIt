@@ -50,7 +50,6 @@ As a user, I want to be able to...
         alt="welcome splash"
         height="300px;" />
     </div>
-    &nbsp;
     <div style="text-align: center">
         <em>Login Form</em>
         <br/>
@@ -58,7 +57,6 @@ As a user, I want to be able to...
         alt="login screen"
         height="300px;" />
     </div>
-    &nbsp;
     <div style="text-align: center">
         <em>Listings Feed</em>
         <br/>
@@ -66,7 +64,6 @@ As a user, I want to be able to...
         alt="listings screen"
         height="300px;" />
     </div>
-    &nbsp;
     <div style="text-align: center">
         <em>Listing Detail</em>
         <br/>
@@ -74,8 +71,6 @@ As a user, I want to be able to...
         alt="listing detail screen"
         height="300px;" />
     </div>
-    &nbsp;
-    &nbsp;
     <div style="text-align: center">
         <em>View Image</em>
         <br/>
@@ -83,7 +78,6 @@ As a user, I want to be able to...
         alt="view image screen"
         height="300px;" />
     </div>
-    &nbsp;
     <div style="text-align: center">
         <em>New Listing Form</em>
         <br/>
@@ -91,7 +85,6 @@ As a user, I want to be able to...
         alt="listing edit screen"
         height="300px;" />
     </div>
-    &nbsp;
     <div style="text-align: center">
         <em>Account Screen</em>
         <br/>
@@ -99,7 +92,6 @@ As a user, I want to be able to...
         alt="account screen"
         height="300px;" />
     </div>
-    &nbsp;
     <div style="text-align: center">
         <em>Messages Screen</em>
         <br/>
@@ -107,7 +99,6 @@ As a user, I want to be able to...
         alt="messages screen"
         height="300px;" />
     </div>
-    &nbsp;
 </div>
 <!-- (./app/assets/screengrabs/welcome.png) -->
 
